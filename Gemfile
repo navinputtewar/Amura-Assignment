@@ -36,6 +36,8 @@ gem 'omniauth-github'
 gem 'httparty', '~> 0.13.7'
 gem 'jquery-rails', '~> 4.0', '>= 4.0.5'
 gem 'jquery-ui-rails'
+gem 'pg', '~> 0.18'
+gem 'rails_12factor', group: :production
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
