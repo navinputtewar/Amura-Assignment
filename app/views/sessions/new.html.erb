@@ -1,0 +1,10 @@
+<% if current_user.blank? %>
+  <h3>Please Sign In</h3>
+  <%= link_to 'Sign In with Github', '/auth/github', class: "btn btn-info" %>
+<% else %>
+  <p>
+    You are signed in as <%= current_user.username %>.
+  </p>
+	  <%= link_to "Sign Out", signout_path, method: :delete, class: "btn btn-primary " %>
+	  <%= link_to 'show repos', show_repos_records_path, class: "btn btn-success" %>
+<% end %>

@@ -1,0 +1,13 @@
+<div class="row">
+	<% @resp.each do |repo| %>
+	  <div class="col-sm-4">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title"><b><%= repo["name"] %></b></h5>
+	        <p class="card-text"><%= repo["description"] %></p>
+	        <a href="<%= show_commits_records_path(name: repo["name"], owner: repo["owner"]["login"])%>" class="btn btn-primary">Show commits</a>
+	      </div>
+	    </div>
+	  </div>
+	<% end %>
+</div>
